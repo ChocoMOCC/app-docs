@@ -8,15 +8,14 @@ Each application owns one directory at the repository root:
 /
 ├── CNAME
 ├── index.html
+├── docs.css
 ├── socmed/
 │   ├── index.html
-│   ├── docs.css
 │   ├── docs.js
 │   └── topic-name/
 │       └── index.html
 ├── gatapp/
 │   ├── index.html
-│   ├── docs.css
 │   ├── docs.js
 │   └── topic-name/
 │       └── index.html
@@ -24,7 +23,7 @@ Each application owns one directory at the repository root:
     └── index.html
 ```
 
-The root `index.html` is the application directory. Each guide uses one directory per topic, plus shared CSS and JavaScript at the application root. Relative asset and navigation paths keep every page deployable beneath its assigned URL.
+The root `index.html` is the application directory. All guides use the root `docs.css` so typography and responsive sizing stay consistent. Each application keeps its search script locally and uses one directory per topic. Relative asset and navigation paths keep every page deployable beneath its assigned URL.
 
 ## Add a guide
 

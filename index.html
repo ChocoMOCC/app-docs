@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Documentation directory for GAT internal applications.">
   <title>GAT App Documentation</title>
-<link rel="stylesheet" href="./docs.css">
+  <link rel="stylesheet" href="./docs.css">
 </head>
 <body class="docs-home">
   <header class="topbar"><div class="brand"><span class="mark">G</span><span><strong>GAT Apps</strong><small>Documentation</small></span></div><button class="theme" id="theme" type="button" aria-label="Switch theme">☼</button></header>
@@ -21,6 +21,6 @@
     </div>
     <footer><span>GAT App Documentation</span><span>Internal operations guides · 2026</span></footer>
   </main>
-  <script>const root=document.documentElement,button=document.querySelector('#theme'),saved=localStorage.getItem('gat-docs-theme');if(saved)root.dataset.theme=saved;function sync(){const dark=root.dataset.theme==='dark';button.textContent=dark?'☼':'☾';button.setAttribute('aria-label',`Switch to ${dark?'light':'dark'} theme`)}button.onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('gat-docs-theme',root.dataset.theme);sync()};sync();</script>
+  <script>const root=document.documentElement,button=document.querySelector('#theme'),storage='docs-theme',saved=localStorage.getItem(storage)||localStorage.getItem('gat-docs-theme');if(saved){root.dataset.theme=saved;localStorage.setItem(storage,saved)}function sync(){const dark=root.dataset.theme==='dark';button.textContent=dark?'☼':'☾';button.setAttribute('aria-label',`Switch to ${dark?'light':'dark'} theme`)}button.onclick=()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem(storage,root.dataset.theme);sync()};sync();</script>
 </body>
 </html>

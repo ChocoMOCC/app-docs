@@ -1,6 +1,4 @@
-# GAT App Documentation
-
-Documentation hub published at `docs.binusgat.com`.
+# App Documentation
 
 ## Structure
 
@@ -11,17 +9,27 @@ Each application owns one directory at the repository root:
 ├── CNAME
 ├── index.html
 ├── socmed/
-│   └── index.html
+│   ├── index.html
+│   ├── docs.css
+│   ├── docs.js
+│   └── topic-name/
+│       └── index.html
+├── gatapp/
+│   ├── index.html
+│   ├── docs.css
+│   ├── docs.js
+│   └── topic-name/
+│       └── index.html
 └── another-app/
     └── index.html
 ```
 
-The root `index.html` is the application directory. Application guides use relative asset paths so they work beneath their assigned URL path.
+The root `index.html` is the application directory. Each guide uses one directory per topic, plus shared CSS and JavaScript at the application root. Relative asset and navigation paths keep every page deployable beneath its assigned URL.
 
 ## Add a guide
 
 1. Create a lowercase directory such as `another-app/`.
-2. Put the deployable site and its `index.html` in that directory.
+2. Add its overview, shared assets, and individual topic directories.
 3. Add its card to the root `index.html`.
 4. Commit and push to `main`.
 
